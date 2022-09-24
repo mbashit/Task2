@@ -7,16 +7,16 @@ using namespace std;
 
 int main()
 {
-	int i, n, max, max_index;
-
-	cout << "Enter numbers of array ending in zero: ";
-	cin >> n;
+	int i = 0, n, max, max_index;
 	
 	int* arr = new int[n];
 
-	for (i = 0; i <= n - 1; i++) {
-		cin >> arr[i];
-	}
+	cout << "type a value and hit Enter; type 0 to stop";
+	do {
+		cin >> n;
+		arr[i] = n;
+		i++;
+	} while(n != 0);
 
 	max_index = 0;
 	max = arr[0];
