@@ -1,23 +1,21 @@
-
 #include <iostream>
-#include <string>
 
 using namespace std;
 
 int main() {
-    string sequence;
+	int num, max = -1000, count = 0, pos;
 
-    cout << "Enter sequence: ";
-    cin >> sequence;
+	do
+	{
+		cin >> num;
 
-    int i = 1, pos_of_highest = 0;
-    while (int(sequence[i]) != 0)
-    {
-        if (int(sequence[i]) > int(sequence[pos_of_highest])) {
-            pos_of_highest = i;
-        }
-        i++;
-    }
+		if (num >= max) {
+			max = num;
+			pos = count + 1;
+		}
 
-    cout << pos_of_highest;
+		count++;
+	} while (num != 0);
+
+	cout << pos;
 }
